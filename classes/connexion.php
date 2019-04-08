@@ -50,7 +50,7 @@ class Connexion{
 
     public function insertPromenade($titre, $auteur, $pays, $ville, $codePostal, $depart, $arrivee, $description, $photo){
         $stmt = $this->connexion->prepare(
-            "INSERT INTO Promenade (titre, auteur, pays, ville, codePostal, depart, arrivee, descr, photo)
+            "INSERT INTO Promenade (titre,auteur, pays, ville, codePostal, depart, arrivee, descr, photo)
             VALUES (:titre, :auteur, :pays, :ville, :codePostal, :depart, :arrivee, :descr, :photo)"
         );
         $stmt->execute(array(

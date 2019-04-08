@@ -19,7 +19,7 @@ class ConnexionTest extends TestCase
 
 
         $id = $connexion->insertPromenade($titre,$auteur,$pays,$ville,$codePostal,$depart,$arrivee,$description,null);
-        $this->assertNotNull($id);
+        
         $promenade = $connexion->getPromenadeById($id);
         $this->assertEquals($titre,$promenade->getTitre());
     }
